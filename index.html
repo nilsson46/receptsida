@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza bianca med soltorkade tomater, vitost och rödlök</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css' integrity='sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==' crossorigin='anonymous'/>
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer ></script>
 </head>
@@ -12,28 +13,56 @@
     <header>
         <nav>
             <ul class="navbar">
-                <li class="logo">LOGO</li>
+                <li class="logo"><img src="./img/Köklogga.png" alt=""></li>
                 <li class="profile">profile</li>
                 <li class="search">search</li>
                 <li class="menu">menu</li>
             </ul>
         </nav>
     </header>
-    <main>
-        <figure class="img">
-            <img src="./img/pizza.jpg" alt="">
-        </figure>
+    <aside class="img">
+        <img src="./img/pizza.jpg" alt="">
+    </aside>
+    <section class="mini-menu">
+        <!--TODO create header tags around all htags :D-->
         <h2 class="header">Pizza bianca med soltorkade tomater, 
-            vitost och rödlök</h2>
-        <div class="mini-menu">
-            <div class="time">Klocka 20min</div>
-            <div class="total-rating">Betyg</div>
-            <p class="short-sum">Små smarriga pizzor att njuta av. Servera dem gärna som förrätt. Självklart kan du istället göra 
-                två stora pizzor istället för minipizzor om du föredrar det.</p>
-        </div>
-        <div>
-            <h3 class="ingredients">Ingredients</h3>
-        </div>
-    </main>
+        vitost och rödlök</h2>
+        <div class="time">Klocka 20min</div>
+        <div class="total-rating">Betyg</div>
+        <p class="short-sum">Små smarriga pizzor att njuta av. Servera dem gärna som förrätt. Självklart kan du istället göra 
+        två stora pizzor istället för minipizzor om du föredrar det.</p>
+    </section>
+    <section class="ingredients">
+        <h3 class="ingredients-h3">Ingredients</h3>
+        <input type="number" class="portions" value="2">
+        <ul class="ingredients-list">
+            <li>Rödlök
+                <input type="number" class="portion-size" readonly>
+                <span class="portion-size-display">1</span>
+            </li>
+            <li>Pizzadeg <div class="portion-size">1</div></li>
+            <li><a href="https://www.arla.se/produkter/apetina/vitost-tarnad-i-olja-solt-tomat-21-100g-49310/">
+                Apetina® Vitost tärnad i olja soltorkad tomat <div class="portion-size">1</div></a>
+            <li> <a href="https://www.arla.se/produkter/arla-koket/creme-fraiche-32-2dl-8291/">
+                Arla Köket® Crème fraiche</a><div class="portion-size">1</div></li>
+            <li>Färsk rosmarin<div class="portion-size">1</div></li>
+        </ul>
+    </section>
+    <section class="step-list">
+        <h3 class="step-h3">Gör så här</h3>
+        <ol>
+            <li class="steps">Värm ugnen och en plåt till 225°.</li>
+            <li class="steps">Skiva löken tunt. Dela pizzadegarna i fyra bitar per deg. Kavla ut och lägg dem på två bakplåtspapper.</li>
+            <li class="steps">Bred på crème fraiche, Toppa med lök och ost med tillhörande olja.</li>
+            <li class="steps">Tillaga högt upp i ugnen 10-12 min.</li>
+            <li class="steps">Toppa med färsk rosmarin.</li>
+        </ol>
+        <h3 class="finished">Klart!</h3>
+    </section>
+    <section class="new-rate">
+        <h4>Betyg</h4>
+        <p>STARS</p>
+        <input type="text" placeholder="Kommentar...">
+    </section>
 </body>
 </html>
