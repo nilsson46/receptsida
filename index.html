@@ -13,58 +13,61 @@
     <header>
         <nav>
             <ul class="navbar">
-                <li class="logo"><img src="./img/Köklogga.png" alt=""></li>
-                <li class="profile">profile</li>
-                <li class="search">search</li>
-                <li class="menu">menu</li>
+                <li class="logo"><img src="./img/Köklogga.png" alt="" height="78px"></li>
+                <div class="menu-options">
+                    <li class="profile">profile</li>
+                    <li class="search">search</li>
+                    <li class="menu">menu</li>
+                </div>
             </ul>
         </nav>
     </header>
-    <aside class="img">
-        <img src="./img/pizza.jpg" alt="">
-    </aside>
-    <section class="mini-menu">
-        <!--TODO create header tags around all htags :D-->
-        <h2 class="header">Pizza bianca med soltorkade tomater, 
-        vitost och rödlök</h2>
-        <div class="time">Klocka 20min</div>
-        <div class="total-rating">Betyg</div>
-        <p class="short-sum">Små smarriga pizzor att njuta av. Servera dem gärna som förrätt. Självklart kan du istället göra 
-        två stora pizzor istället för minipizzor om du föredrar det.</p>
-    </section>
-    <section class="ingredients">
-        <h3 class="ingredients-h3">Ingredients</h3>
-        <input type="number" class="portions" value="2">
-        
-        
-        
-        <ul class="ingredients-list">
-            <li>Rödlök
-                <input type="number" class="ingredients-size" value="3" readonly>
-            </li>
-            <li>Pizzadeg <input type="number" class="ingredients-size" value="1" readonly></li>
-            <li><a href="https://www.arla.se/produkter/apetina/vitost-tarnad-i-olja-solt-tomat-21-100g-49310/">
-                Apetina® Vitost tärnad i olja soltorkad tomat <input type="number" class="ingredients-size" value="1" readonly></a>
-            <li> <a href="https://www.arla.se/produkter/arla-koket/creme-fraiche-32-2dl-8291/">
-                Arla Köket® Crème fraiche</a><input type="number" class="ingredients-size" value="1" readonly></li>
-            <li>Färsk rosmarin<input type="number" class="ingredients-size" value="1" readonly></li>
-        </ul>
-    </section>
-    <section class="step-list">
-        <h3 class="step-h3">Gör så här</h3>
-        <ol>
-            <li class="steps">Värm ugnen och en plåt till 225°.</li>
-            <li class="steps">Skiva löken tunt. Dela pizzadegarna i fyra bitar per deg. Kavla ut och lägg dem på två bakplåtspapper.</li>
-            <li class="steps">Bred på crème fraiche, Toppa med lök och ost med tillhörande olja.</li>
-            <li class="steps">Tillaga högt upp i ugnen 10-12 min.</li>
-            <li class="steps">Toppa med färsk rosmarin.</li>
-        </ol>
-        <h3 class="finished">Klart!</h3>
-    </section>
-    <section class="new-rate">
-        <h4>Betyg</h4>
-        <p>STARS</p>
-        <input type="text" placeholder="Kommentar...">
-    </section>
+    <section class="container">
+        <aside class="img">
+            <img src="./img/pizza.jpg" width="100%">
+        </aside>
+        <section class="mini-menu">
+            <!--TODO create header tags around all htags :D-->
+            <h2 class="header">Pizza bianca med soltorkade tomater, 
+            vitost och rödlök</h2>
+            <div class="time">Klocka 20min</div>
+            <div class="total-rating">Betyg</div>
+            <p class="short-sum">Små smarriga pizzor att njuta av. Servera dem gärna som förrätt. Självklart kan du istället göra 
+            två stora pizzor istället för minipizzor om du föredrar det.</p>
+        </section>
+        <section class="ingredients">
+            <h3 class="ingredients-h3">Ingredients</h3>
+            <input type="number" class="portions" value="2">
+            <ul class="ingredients-list">
+                <li>Rödlök
+                    <input type="number" class="ingredients-size" value="3" readonly hidden>
+                    <span id="amount"></span>
+                </li>
+                <li>Pizzadeg <input type="number" class="ingredients-size" value="1" readonly hidden></li>
+                <li><a href="https://www.arla.se/produkter/apetina/vitost-tarnad-i-olja-solt-tomat-21-100g-49310/">
+                    Apetina® Vitost tärnad i olja soltorkad tomat <input type="number" class="ingredients-size" value="1" readonly></a>
+                <li> <a href="https://www.arla.se/produkter/arla-koket/creme-fraiche-32-2dl-8291/">
+                    Arla Köket® Crème fraiche</a><input type="number" class="ingredients-size" value="1" readonly></li>
+                <li>Färsk rosmarin<input type="number" class="ingredients-size" value="1" readonly></li>
+            </ul>
+        </section>
+        <section class="step-list">
+            <h3 class="step-h3">Gör så här</h3>
+            <ol>
+                <li class="steps">Värm ugnen och en plåt till 225°.</li>
+                <li class="steps">Skiva löken tunt. Dela pizzadegarna i fyra bitar per deg. Kavla ut och lägg dem på två bakplåtspapper.</li>
+                <li class="steps">Bred på crème fraiche, Toppa med lök och ost med tillhörande olja.</li>
+                <li class="steps">Tillaga högt upp i ugnen 10-12 min.</li>
+                <li class="steps">Toppa med färsk rosmarin.</li>
+            </ol>
+            <h3 class="finished">Klart!</h3>
+        </section>
+        <section class="new-rate">
+            <h4>Betyg</h4>
+            <p>STARS</p>
+            <input class="comment" type="text" placeholder="Kommentar...">
+            <button class="comment-btn">Post</button>
+        </section>
+</section>
 </body>
 </html>
