@@ -26,11 +26,12 @@ h3{
 .logo-img{
     max-width: 20%;
 }
+/*TODO fix so the icons looks more nice!*/
 .nav-img{
-   max-width: 40%;
-   background-color: rgb(219, 79, 219);
-   padding: 0.5rem;
-   border-radius: 2.2rem;
+   max-width: 25%;
+   background-color: #d070eb;
+   padding: 1rem;
+   border-radius: 100%;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -61,23 +62,30 @@ h3{
     width: 100%;
 }
 .mini-menu{
-    background-color: rgb(119, 119, 176);
+    background-color: rgb(231, 168, 249);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 0.5rem;
     height: 15rem;
+    margin: 0.5rem;
+    border-radius: 1rem;
 }
 
 
 
 .ingredients{
     background-color: rgb(247, 247, 247);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 1rem;
 } 
 
 .ingredient{
     display: flex;
     justify-content: space-between;
+    padding: 1rem;
 }
 
 .portions{
@@ -89,7 +97,20 @@ h3{
 }
 
 .step-list{
-    background-color: green;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.steps{
+    background-color: #D775F3;
+    padding: 0.5rem;
+    margin: 0.3rem;
+    border-radius: 1rem;
+}
+
+.checkbox{
+    accent-color: #A606D3;
 }
 
 .new-rate{

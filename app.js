@@ -14,3 +14,20 @@ function updateIngredientAmounts() {
 updateIngredientAmounts();
 
 portionsInput.addEventListener("change", updateIngredientAmounts);
+
+function checkbox() {
+    const checkboxes = document.querySelectorAll(".checkbox");
+    const steps = document.querySelectorAll(".steps");
+
+    checkboxes.forEach(function(checkbox, index) {
+        checkbox.addEventListener("change", function() {
+            if (checkbox.checked) {
+                steps[index].style.color = "grey";
+            } else {
+                steps[index].style.color = "initial";
+            }
+        });
+    });
+}
+
+checkbox();
