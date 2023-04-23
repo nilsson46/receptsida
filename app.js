@@ -1,21 +1,16 @@
-const portionSize = document.querySelector(".portions");
-console.log(portionSize.value);
+const portionsInput = document.querySelector(".portions");
+const ingredientSizes = document.querySelectorAll(".ingredients-size");
+const amountSpans = document.querySelectorAll(".amount");
 
-const ingredientsSize = document.querySelector(".ingredients-size");
-console.log(ingredientsSize.value); 
-const amountEl = document.querySelector("#amount");
-
-function calculateAmount(){
-    totalIngredients = portionSize.value*ingredientsSize.value;
-    return totalIngredients
+function updateIngredientAmounts() {
+  const portions = portionsInput.value;
+  ingredientSizes.forEach((sizeInput, index) => {
+    const originalValue = sizeInput.getAttribute("value");
+    const newValue = originalValue * portions;
+    amountSpans[index].textContent = `${newValue}`;
+  });
 }
 
-function updateAmount() {
-    const amount = calculateAmount();
-    amountEl.textContent = amount;
-  }
-  
+updateIngredientAmounts();
 
-updateAmount();
-  
-portionSize.addEventListener("input", updateAmount);
+portionsInput.addEventListener("change", updateIngredientAmounts);
