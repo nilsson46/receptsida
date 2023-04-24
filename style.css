@@ -1,3 +1,6 @@
+/*TODO change the size of the boxes when on computer */
+/* TODO fix the scss folder structure*/
+
 .body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.2rem;
@@ -31,7 +34,8 @@ h3{
    max-width: 25%;
    background-color: #d070eb;
    padding: 1rem;
-   border-radius: 100%;
+   border-radius: 50%;
+   overflow: visible;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -54,7 +58,6 @@ h3{
 
 
 .img{
-   background-color: yellow;
    width: 100%;
 }
 
@@ -75,7 +78,7 @@ h3{
 
 
 .ingredients{
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -91,7 +94,7 @@ h3{
 .portions{
     width: 2rem;
     height: 1.5rem;
-    background-color: rgb(197, 165, 197);
+    background-color: #E7A8F9;
     font-weight: bold;
     margin: 1rem;
 }
@@ -103,7 +106,7 @@ h3{
 }
 
 .steps{
-    background-color: #D775F3;
+    background-color: #E7A8F9;
     padding: 0.5rem;
     margin: 0.3rem;
     border-radius: 1rem;
@@ -114,5 +117,15 @@ h3{
 }
 
 .new-rate{
-    background-color: brown;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.comment{
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color: #E7A8F9;
 }

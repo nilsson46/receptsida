@@ -31,3 +31,15 @@ function checkbox() {
 }
 
 checkbox();
+
+/*TODO set a timer with a fun sound! */ 
+
+const post = document.getElementById("post");
+post.addEventListener("click", function(){
+    const commentValue = document.getElementById("comment").value;
+
+    const li = document.createElement("li");
+    const text = document.createTextNode(commentValue);
+    li.appendChild(text);
+    document.getElementById("unordered").appendChild(li);
+});
