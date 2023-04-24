@@ -15,6 +15,8 @@ updateIngredientAmounts();
 
 portionsInput.addEventListener("change", updateIngredientAmounts);
 
+
+
 function checkbox() {
     const checkboxes = document.querySelectorAll(".checkbox");
     const steps = document.querySelectorAll(".steps");
@@ -39,7 +41,22 @@ post.addEventListener("click", function(){
     const commentValue = document.getElementById("comment").value;
 
     const li = document.createElement("li");
+    li.className = "comment"
     const text = document.createTextNode(commentValue);
     li.appendChild(text);
+    const hr = document.createElement("hr");
+    li.appendChild(hr);
     document.getElementById("unordered").appendChild(li);
 });
+
+const stars = document.querySelectorAll(".rating__star");
+    stars.forEach(function(star) {
+        star.addEventListener("click", function() {
+            const starValue = this.getAttribute("value");
+            console.log(starValue);
+        });
+    });
+
+
+
+

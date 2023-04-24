@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza bianca med soltorkade tomater, vitost och rödlök</title>
+    <script src="https://kit.fontawesome.com/de43a23c3e.js" crossorigin="anonymous"></script>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css' integrity='sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==' crossorigin='anonymous'/>
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer ></script>
@@ -41,7 +42,6 @@
         <section class="ingredients">
             <h3 class="header">Ingredients</h3>
             <div class="portions2">
-                <!--TODO should i put a tag around this to put them beside eachother-->
                 <label>Portioner</label>
                 <input type="number" class="portions" value="4"> 
             <ul class="ingredients-list">
@@ -84,7 +84,7 @@
         </section>
         <section class="step-list">
             <h3 class="header">Gör så här</h3>
-            <ol><!--TODO do i need a p-tag around the text?-->
+            <ol>
                 <li class="steps"> <input type="checkbox" class="checkbox"></input> Värm ugnen och en plåt till 225°.</li>
                 <li class="steps"> <input type="checkbox" class="checkbox"></input> Skiva löken tunt. Dela pizzadegarna i fyra bitar per deg. Kavla ut och lägg dem på två bakplåtspapper.</li>
                 <li class="steps"> <input type="checkbox" class="checkbox"></input> Bred på crème fraiche, Toppa med lök och ost med tillhörande olja.</li>
@@ -95,7 +95,13 @@
         </section>
         <section class="new-rate">
             <h4 class="header">Betyg</h4>
-            <p>STARS</p>
+            <div class="rating">
+                <i class="rating__star far fa-star" value="1"></i>
+                <i class="rating__star far fa-star" value="2"></i>
+                <i class="rating__star far fa-star" value="3"></i>
+                <i class="rating__star far fa-star" value="4"></i>
+                <i class="rating__star far fa-star" value="5"></i>
+            </div>
             <input id="comment" type="text" placeholder="Kommentar...">
             <button id="post">Post</button>
         </section>
