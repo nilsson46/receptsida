@@ -47,13 +47,25 @@ post.addEventListener("click", function(){
     const hr = document.createElement("hr");
     li.appendChild(hr);
     document.getElementById("unordered").appendChild(li);
+
+    document.getElementById("comment").value ="";
 });
+
+let selectedStar = null;
 
 const stars = document.querySelectorAll(".rating__star");
     stars.forEach(function(star) {
         star.addEventListener("click", function() {
             const starValue = this.getAttribute("value");
+            selectedStar = starValue;
             console.log(starValue);
+            const commentField = document.getElementById("comment");
+            
+            if(commentField.value === ""){
+                commentField.value = "Betyg: " + selectedStar + "/5";
+            } else{
+                commentField.value += " Betyg: " + selectedStar + "/5";
+            }
         });
     });
 
