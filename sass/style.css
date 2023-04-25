@@ -1,0 +1,180 @@
+/*TODO change the size of the boxes when on computer */
+/* TODO fix the scss folder structure*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+.body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 800px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .section {
+    width: 40%;
+  }
+  .img {
+    padding: 1rem;
+    width: 45%;
+  }
+}
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.header {
+  font-weight: 600;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.logo-img {
+  max-width: 20%;
+}
+
+.nav-img {
+  max-width: 25%;
+  background-color: #d070eb;
+  padding: 1rem;
+  border-radius: 50%;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-options {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: small;
+}
+
+.menu-img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pizza-img {
+  width: 100%;
+}
+
+.mini-menu {
+  background-color: rgb(231, 168, 249);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0.5rem;
+  height: 15rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+}
+
+.ingredients {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.ingredient {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.portions {
+  width: 2rem;
+  height: 1.5rem;
+  background-color: #E7A8F9;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.step-list {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.steps {
+  background-color: #E7A8F9;
+  padding: 0.5rem;
+  margin: 0.3rem;
+  border-radius: 1rem;
+}
+
+.checkbox {
+  accent-color: #A606D3;
+}
+
+.new-rate {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.comment-section .comment {
+  border: 2px solid #efcef8;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+hr {
+  border: none;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.rating {
+  position: relative;
+  width: 180px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
+  padding: 5px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 2px #b3acac;
+}
+
+.rating__result {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-10px) translateX(-5px);
+  z-index: -9;
+  font: 3em Arial, Helvetica, sans-serif;
+  color: rgba(235, 235, 235, 0.5568627451);
+  pointer-events: none;
+}
+
+.rating__star {
+  font-size: 1.3em;
+  cursor: pointer;
+  color: rgba(218, 189, 24, 0.6980392157);
+  transition: filter linear 0.3s;
+}
+
+.rating__star:hover {
+  filter: drop-shadow(1px 1px 4px gold);
+}/*# sourceMappingURL=style.css.map */
