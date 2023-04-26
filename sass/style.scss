@@ -49,9 +49,6 @@ $background-pink:#eee7ef;
 }
 
 @media only screen and (max-width: 800px) {
-    .ingredients{
-        padding: 1rem;
-    }
     .recipe{
         width: 70%;
     }
@@ -155,6 +152,7 @@ h3{
 .step-list{
     display: flex;
     flex-direction: column;
+    padding: 1rem;
 }
 
 .steps{

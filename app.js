@@ -2,6 +2,7 @@ const portionsInput = document.querySelector(".portions");
 const ingredientSizes = document.querySelectorAll(".ingredients-size");
 const amountSpans = document.querySelectorAll(".amount");
 
+
 function updateIngredientAmounts() {
   const portions = portionsInput.value;
   ingredientSizes.forEach((sizeInput, index) => {
@@ -66,6 +67,13 @@ const stars = document.querySelectorAll(".rating__star");
         });
     });
 
+function timer(){
+    setTimeout(setAlert, 1000);
+}
+function setAlert(){
+    const audio = new Audio("/sound/i-want-pizza-47519.mp3")
+    audio.play();
+}
 
 
 
