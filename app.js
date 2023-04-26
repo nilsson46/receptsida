@@ -45,13 +45,24 @@ post.addEventListener("click", function(){
     li.appendChild(text);
     document.getElementById("unordered").appendChild(li);
     document.getElementById("comment").value ="";
+    let totalRatingDiv = document.querySelector(".total-rating");
+    const averageRating = totalStarValue / totalStarsClicked;
+    totalRatingDiv.textContent = "Snittbetyg: " + averageRating.toFixed(1);
 });
 
+let starValue = null;
+
 const stars = document.querySelectorAll(".rating__star");
+let totalStarsClicked = 0;
+let totalStarValue = 0;
+const previousStar = null;
+/*TODO you can press a star many times and its count in the*/
     stars.forEach(function(star) {
         star.addEventListener("click", function() {
             const starValue = this.getAttribute("value");
-            starValue.className ="starValue"
+            starValue.className ="starValue";
+            totalStarValue += parseInt(starValue);
+            totalStarsClicked++;
             console.log(starValue);
             const commentField = document.getElementById("comment");
             if(commentField.value === ""){
@@ -68,7 +79,7 @@ function timer(){
 function setAlert(){
     const audio = new Audio("/sound/i-want-pizza-47519.mp3")
     audio.play();
-}
+} 
 
 
 

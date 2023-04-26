@@ -1,0 +1,111 @@
+<!--https://www.arla.se/recept/pizza-bianca-med-soltorkade-tomater-vitost-och-rodlok/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--TODO check validation in html-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza bianca med soltorkade tomater, vitost och rödlök</title>
+    <script src="https://kit.fontawesome.com/de43a23c3e.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css' integrity='sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==' crossorigin='anonymous'/>
+    <link rel="stylesheet" href="./sass/style.css">
+    <script src="app.js" defer ></script>
+</head>
+<body class="body">
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li class="logo"><img src="./img/Köklogga.png" alt="" class="logo-img"></li>
+                <div class="menu-options">
+                    <li class="menu-img profile"><img src="./img/user.png" class="nav-img"></li>
+                    <li class="menu-img search"><img src="./img/search-interface-symbol.png" class="nav-img"></li>
+                    <li class="menu-img menu"><img src="./img/menu.png" class="nav-img"></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <section class="container">
+        <aside class="img section">
+            <img class="pizza-img" src="./img/pizza.jpg">
+        </aside>
+        <section class="mini-menu section">
+            <h2 class="header pizza-text">Pizza bianca med soltorkade tomater, 
+            vitost och rödlök</h2>
+            <div class="time"><img src="./img/clock.png" alt="clock" class="clock-img"> 20min</div>
+            <!--TODO create 5 stars and check if its possible to connect to rating-->
+            <div class="total-rating"></div>
+            <p class="short-sum">Små smarriga pizzor att njuta av. Servera dem gärna som förrätt. Självklart kan du istället göra 
+            två stora pizzor istället för minipizzor om du föredrar det.</p>
+        </section>
+        <section class="ingredients section">
+            <h3 class="header">Ingredients</h3>
+            <div class="portions-section">
+                <label>Portioner</label>
+                <input type="number" class="portions" value="4"> 
+            <ul class="ingredients-list">
+                <li class="ingredient">Rödlök
+                    <span>
+                        <input type="number" class="ingredients-size" value="0.25" readonly hidden>
+                        <span class="amount"></span>
+                        <span>st</span>
+                    </span>
+                </li>
+                <li class="ingredient">Pizzadeg <input type="number" class="ingredients-size" value="0.5" readonly hidden> 
+                    <span>
+                    <span class="amount"></span>
+                    <span>st</span>
+                </span>
+                </li>
+                <li class="ingredient"><a href="https://www.arla.se/produkter/apetina/vitost-tarnad-i-olja-solt-tomat-21-100g-49310/">
+                    Apetina® Vitost tärnad i olja soltorkad tomat <input type="number" class="ingredients-size" value="0.5" readonly hidden></a>
+                    <span>
+                        <span class="amount"></span>
+                        <span>förp</span>
+                    </span>
+                </li>
+                <li class="ingredient"> <a href="https://www.arla.se/produkter/arla-koket/creme-fraiche-32-2dl-8291/">
+                    Arla Köket® Crème fraiche</a><input type="number" class="ingredients-size" value="0.5" readonly hidden>
+                    <span>
+                        <span class="amount"></span>
+                        <span>dl</span>
+                    </span>
+                </li>    
+                <li class="ingredient">Färsk rosmarin<input type="number" class="ingredients-size" value="0.25" readonly hidden>
+                    <span>
+                        <span class="amount"></span>
+                        <span>kvist</span>
+                    </span>
+                </li>
+            </ul>
+        </section>
+        <section class="step-list section">
+            <h3 class="header">Gör så här</h3>
+            <ol>
+                <li class="steps"> <input type="checkbox" class="checkbox"></input> Värm ugnen och en plåt till 225°.</li>
+                <li class="steps"> <input type="checkbox" class="checkbox"></input> Skiva löken tunt. Dela pizzadegarna i fyra bitar per deg. Kavla ut och lägg dem på två bakplåtspapper.</li>
+                <li class="steps"> <input type="checkbox" class="checkbox"></input> Bred på crème fraiche, Toppa med lök och ost med tillhörande olja.</li>
+                <li class="steps"> <input type="checkbox" class="checkbox"></input> Tillaga högt upp i ugnen 10-12 min. <button onClick ="timer()" id="timer-btn"> Sätt timer 10 min</button></li>
+                <li class="steps"> <input type="checkbox" class="checkbox"></input> Toppa med färsk rosmarin.</li>
+            </ol>
+            <h3 class="finished header">Klart!</h3>
+        </section>
+    </section>
+        <section class="new-rate">
+            <h4 class="header">Betyg</h4>
+            <div class="rating">
+                <i class="rating__star far fa-star" value="1"></i>
+                <i class="rating__star far fa-star" value="2"></i>
+                <i class="rating__star far fa-star" value="3"></i>
+                <i class="rating__star far fa-star" value="4"></i>
+                <i class="rating__star far fa-star" value="5"></i>
+            </div>
+            <input id="comment" type="text" placeholder="Kommentar...">
+            <button id="post">Post</button>
+        </section>
+        <section class="comment-section">
+            <ul id="unordered"></ul>
+        </section>
+
+</body>
+</html>
