@@ -13,12 +13,15 @@ $background-pink:#eee7ef;
     background-color:$lightpink;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     border-radius: 1rem;
     padding: 1rem;
 }
 
 .recipe-link{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .body{
@@ -50,16 +53,16 @@ $background-pink:#eee7ef;
 
 @media only screen and (max-width: 800px) {
     .recipe{
-        width: 70%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
     .section{
         margin: 1rem;
     }
-    .pizza-img{
-        margin-top: 1rem;
-    }
+    
 }
-h2{
+.pizza-text{
     font-size: 2rem;
 }
 h3{
@@ -119,12 +122,21 @@ h3{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 0.5rem;
-    height: 15rem;
     border-radius: 1rem;
+    padding: 1rem;
 }
 
+.clock-img{
+    height: 1.2rem;
+}
 
+.time{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.total-rating{
+    padding-bottom: 1rem;
+}
 
 .ingredients{
     background-color: $section-pink;
@@ -164,6 +176,16 @@ h3{
 
 .checkbox{
     accent-color: $logocolor;
+}
+
+#timer-btn{
+    border-radius: 0.5rem;
+    border: $background-pink black 2px;
+    margin-left: 1rem;
+    background-color: $pink;
+}
+#timer-btn:hover{
+    background-color: $logocolor;
 }
 
 .new-rate{
