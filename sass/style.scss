@@ -15,7 +15,6 @@ $background-pink:#eee7ef;
     flex-wrap: wrap;
     border-radius: 1rem;
     padding: 1rem;
-    margin: 1rem;
 }
 
 .recipe-link{
@@ -24,18 +23,23 @@ $background-pink:#eee7ef;
 
 .body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+    font-size: 1.2rem;
 }
+
+
 @media only screen and (min-width: 800px) {
 
     .container {
         display: flex;
         flex-wrap: wrap;
+        margin: 5rem;
+        justify-content: space-evenly;
+        border-radius: 1rem;
     }
 
     .section{
         width: 43%;
-        padding: 1rem;
+        margin: 1rem;
     }
 
     .recipe{
@@ -51,9 +55,15 @@ $background-pink:#eee7ef;
     .recipe{
         width: 70%;
     }
+    .section{
+        margin: 1rem;
+    }
+    .pizza-img{
+        margin-top: 1rem;
+    }
 }
 h2{
-    font-size: 1.7rem;
+    font-size: 2rem;
 }
 h3{
     font-size: 1.5rem;
@@ -86,7 +96,6 @@ h3{
    align-items: center;
    justify-content: center;
    flex-grow:0;
-
 }
 
 .menu-options{
@@ -115,7 +124,6 @@ h3{
     justify-content: space-around;
     padding: 0.5rem;
     height: 15rem;
-    margin: 0.5rem;
     border-radius: 1rem;
 }
 
@@ -126,6 +134,7 @@ h3{
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
+    padding: 1rem;
 } 
 
 .ingredient{
@@ -139,7 +148,6 @@ h3{
     height: 1.5rem;
     background-color: $pink;
     font-weight: bold;
-    margin: 1rem;
     border-radius: 0.5rem;
     border: solid $logocolor;
 }
@@ -147,14 +155,13 @@ h3{
 .step-list{
     display: flex;
     flex-direction: column;
-    padding: 1rem;
 }
 
 .steps{
     background-color: $pink;
     padding: 0.5rem;
-    margin: 0.3rem;
     border-radius: 1rem;
+    margin: 0.5rem;
 }
 
 .checkbox{
@@ -169,51 +176,52 @@ h3{
     padding: 2rem;
 }
 
+#comment{
+    height: 1.5rem;
+    border: $pink solid 2px;
+    border-radius: 0.7rem;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+#post{
+    width: 4em;
+    height: 2em;
+    border-radius: 5px;
+    border: $pink solid 2px;
+    background-color: $lightpink;
+}
+
+#post:hover{
+    background-color: $logocolor;
+}
+
 .comment-section .comment {
-    border: 2px solid #efcef8;;
+    border: 2px solid $pink;
     border-radius: 5px;
     padding: 1rem;
     margin: 1rem;
 }
 
-hr {
-    border: none;
-    margin: 10px 0;
-    width: 100%;
-}
-
 .rating {
     position: relative;
-    width: 180px;
     background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: .3em;
-    padding: 5px;
+    padding: 1rem;
     overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 0 2px #b3acac;
- }
- 
- .rating__result {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-10px) translateX(-5px);
-    z-index: -9;
-    font: 3em Arial, Helvetica, sans-serif;
-    color: #ebebeb8e;
-    pointer-events: none;
- }
- 
- .rating__star {
+    
+}
+.rating__star {
     font-size: 1.3em;
     cursor: pointer;
     color: #dabd18b2;
     transition: filter linear .3s;
- }
- 
- .rating__star:hover {
+}
+
+.rating__star:hover {
     filter: drop-shadow(1px 1px 4px gold);
- }
+    color: gold;
+}
