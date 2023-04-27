@@ -1,8 +1,3 @@
-/* TODO fix the scss folder structure*/
-/*TODO set colors to variables*/
-/*TODO fix sizes of the icons*/
-/*@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");*/
-/*TODO Fix a background on the main page*/
 .recipe {
   background-color: #eed6f5;
   display: flex;
@@ -201,7 +196,7 @@ h3 {
   padding: 0.5rem;
 }
 
-#post {
+.comment-btn {
   width: 4em;
   height: 2em;
   border-radius: 5px;
@@ -209,7 +204,7 @@ h3 {
   background-color: #eed6f5;
 }
 
-#post:hover {
+.comment-btn:hover {
   background-color: #d070eb;
 }
 

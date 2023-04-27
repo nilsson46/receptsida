@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--TODO check validation in html-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +32,6 @@
             <h2 class="header pizza-text">Pizza bianca med soltorkade tomater, 
             vitost och rödlök</h2>
             <div class="time"><img src="./img/clock.png" alt="clock" class="clock-img"> 20min</div>
-            <!--TODO create 5 stars and check if its possible to connect to rating-->
             <div class="total-rating"></div>
             <p class="short-sum">Små smarriga pizzor att njuta av. Servera dem gärna som förrätt. Självklart kan du istället göra 
             två stora pizzor istället för minipizzor om du föredrar det.</p>
@@ -101,8 +99,9 @@
                 <i class="rating__star far fa-star" value="5"></i>
             </div>
                 <input id="comment" type="text" placeholder="Kommentar...">
-                <div class="comment-btn"><button id="post">Post</button>
-                <button id="reset">Reset</button>
+                <div class="comment-btns">
+                    <button id="post" class="comment-btn">Post</button>
+                    <button id="reset" class="comment-btn">Reset</button>
             </div>
         </section>
         <section class="comment-section">

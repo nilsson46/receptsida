@@ -3,15 +3,14 @@ const ingredientSizes = document.querySelectorAll(".ingredients-size");
 const amountSpans = document.querySelectorAll(".amount");
 const commentField = document.getElementById("comment");
 const checkboxes = document.querySelectorAll(".checkbox");
-    const steps = document.querySelectorAll(".steps");
+const steps = document.querySelectorAll(".steps");
 
 function updateIngredientAmounts() {
   const portions = portionsInput.value;
   let originalValue, newValue = undefined;
-  
   ingredientSizes.forEach((sizeInput, index) => {
     originalValue = sizeInput.getAttribute("value");
-    const newValue = originalValue * portions;
+    newValue = originalValue * portions;
     amountSpans[index].textContent = `${newValue}`;
   });
 }
@@ -59,14 +58,13 @@ const stars = document.querySelectorAll(".rating__star");
 let totalStarsClicked = 0;
 let totalStarValue = 0;
 const previousStar = null;
-/*TODO you can press a star many times and its count in the*/
+/*BUG you can press a star many times and its count in the*/
     stars.forEach(function(star) {
         star.addEventListener("click", function() {
             const starValue = this.getAttribute("value");
             totalStarValue += parseInt(starValue);
             totalStarsClicked++;
             console.log(starValue);
-           
             if(commentField.value === ""){
                 commentField.value = "Betyg: " + starValue + "/5";
             } else{
