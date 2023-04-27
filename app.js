@@ -1,12 +1,16 @@
 const portionsInput = document.querySelector(".portions");
 const ingredientSizes = document.querySelectorAll(".ingredients-size");
 const amountSpans = document.querySelectorAll(".amount");
-
+const commentField = document.getElementById("comment");
+const checkboxes = document.querySelectorAll(".checkbox");
+    const steps = document.querySelectorAll(".steps");
 
 function updateIngredientAmounts() {
   const portions = portionsInput.value;
+  let originalValue, newValue = undefined;
+  
   ingredientSizes.forEach((sizeInput, index) => {
-    const originalValue = sizeInput.getAttribute("value");
+    originalValue = sizeInput.getAttribute("value");
     const newValue = originalValue * portions;
     amountSpans[index].textContent = `${newValue}`;
   });
@@ -19,9 +23,6 @@ portionsInput.addEventListener("change", updateIngredientAmounts);
 
 
 function checkbox() {
-    const checkboxes = document.querySelectorAll(".checkbox");
-    const steps = document.querySelectorAll(".steps");
-
     checkboxes.forEach(function(checkbox, index) {
         checkbox.addEventListener("change", function() {
             if (checkbox.checked) {
@@ -38,7 +39,9 @@ checkbox();
 const post = document.getElementById("post");
 post.addEventListener("click", function(){
     const commentValue = document.getElementById("comment").value;
-
+    if(commentValue == ""){
+        return;
+    }
     const li = document.createElement("li");
     li.className = "comment"
     const text = document.createTextNode(commentValue);
@@ -60,11 +63,10 @@ const previousStar = null;
     stars.forEach(function(star) {
         star.addEventListener("click", function() {
             const starValue = this.getAttribute("value");
-            starValue.className ="starValue";
             totalStarValue += parseInt(starValue);
             totalStarsClicked++;
             console.log(starValue);
-            const commentField = document.getElementById("comment");
+           
             if(commentField.value === ""){
                 commentField.value = "Betyg: " + starValue + "/5";
             } else{
@@ -80,6 +82,15 @@ function setAlert(){
     const audio = new Audio("/sound/i-want-pizza-47519.mp3")
     audio.play();
 } 
+
+function clearComment(){
+    const resetBtn = document.getElementById("reset");
+    resetBtn.addEventListener("click", function(){
+        commentField.value ="";
+    })
+}
+
+clearComment();
 
 
 
